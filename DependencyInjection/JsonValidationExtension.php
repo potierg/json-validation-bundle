@@ -21,17 +21,17 @@ class JsonValidationExtension extends Extension
         $configs = $this->processConfiguration($configuration, $configs);
 
         if ($configs['enable_request_listener']) {
-            $container->getDefinition('potierg_json_validation.request_listener')
+            $container->getDefinition('mrsuh_json_validation.request_listener')
                       ->addTag('kernel.event_listener', ['event' => 'kernel.controller', 'priority' => -100]);
         }
 
         if ($configs['enable_response_listener']) {
-            $container->getDefinition('potierg_json_validation.response_listener')
+            $container->getDefinition('mrsuh_json_validation.response_listener')
                       ->addTag('kernel.event_listener', ['event' => 'kernel.response', 'priority' => -100]);
         }
 
         if ($configs['enable_exception_listener']) {
-            $container->getDefinition('potierg_json_validation.exception_listener')
+            $container->getDefinition('mrsuh_json_validation.exception_listener')
                       ->addTag('kernel.event_listener', ['event' => 'kernel.exception']);
         }
     }
