@@ -9,7 +9,7 @@ class Configuration implements ConfigurationInterface
 {
     public function getConfigTreeBuilder()
     {
-        $treeBuilder = new TreeBuilder('potierg_json_validation');
+        $treeBuilder = new TreeBuilder('mrsuh_json_validation');
         $treeBuilder
             ->getRootNode()
             ->children()
